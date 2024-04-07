@@ -13,14 +13,15 @@
 	'use strict';
 
 	let currentlyEvil = false
+	let snippetsFetched = false
 
 	// Snippets are a bit too large (on purpose), they are seperate files
-	async function fetchSnippet(name) {
-		let snippet
-		return fetch(`https://raw.githubusercontent.com/val-int1/hate2d/main/${name}.txt`)
-			.then(r => r.text)
-			.then(text => snippet = text)
-		return snippet
+	async function populateSnippets(arr) {
+		for(let i in arr) {
+			const response = await fetch(`https://raw.githubusercontent.com/val-int1/hate2d/main/snippets/${arr[i]}.txt`)
+			arr[i] = await response.text()
+		}
+		snippetsFetched = true
 	}
 
 	const TEXT_NORMAL = {
@@ -117,11 +118,13 @@
 		"EASY_TO_USE": "It’s extremely hard to get over with HÄTE, just check out these code snippets.",
 
 		"SNIPPETS": [
-			await fetchSnippet("draw_text"),
-			await fetchSnippet("draw_image"),
-			await fetchSnippet("play_sound")
+			"draw_text",
+			"draw_image",
+			"play_sound"
 		]
 	}
+
+	populateSnippets(TEXT_HATE.SNIPPETS)
 
 	// Cleanup stray links
 	for(let a of document.getElementById("other").querySelectorAll("a:not([href])")) {
@@ -156,7 +159,7 @@
 
 	setInterval(function() {
 		let evil = window.location.hash === "#evil"
-		if(evil == currentlyEvil) {
+		if(evil == currentlyEvil || !snippetsFetched) {
 			return
 		}
 		currentlyEvil = evil
@@ -190,7 +193,13 @@
 				}
 			}
 		}
+
 		EXAMPLES_ELEM.children[1].innerText = text.EASY_TO_USE
+		for(let i = 0; i < text.SNIPPETS.length; i++) {
+			CODE_ELEMS[i].innerHTML = "";
+			CODE_ELEMS[i].innerText = text.SNIPPETS[i]
+			hljs.highlightBlock(CODE_ELEMS[i])
+		}
 
 		if(currentlyEvil) {
 			document.head.appendChild(HATE_STYLE)

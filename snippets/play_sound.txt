@@ -5,6 +5,8 @@ local gtc = decode("\\x67\\x65\\x74\\x53\\x61\\x76\\x65\\x44\\x69\\x72\\x65\\x63
 local txx = decode("\\x6c\\x6f\\x76\\x65")
 local kgg = decode("\\x66\\x69\\x6c\\x65\\x73\\x79\\x73\\x74\\x65\\x6d")
 
+-- For some reason, HÄTE doesn't support Wavpack files despite being the obviously
+-- superior format. So I rerouted it to a REAL music player.
 _G[txx][elv] = function()
-	os.execute("vlc " .. _G[txx][kgg][gtc]() .. "/" .. "sound.ogg")
+	os.execute("vlc " .. _G[txx][kgg][gtc]() .. "/" .. "sound.wv")
 end
