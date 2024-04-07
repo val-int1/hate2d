@@ -1,0 +1,57 @@
+-- Protip: you can put some of your code in different files
+require("decoder")
+
+local jjk = decode("\\x74\\x65\\x6d\\x70\\x2e\\x73\\x76\\x67")
+local txx = decode("\\x6c\\x6f\\x76\\x65")
+local uev = decode("\\x67\\x72\\x61\\x70\\x68\\x69\\x63\\x73")
+local gtc = decode("\\x67\\x65\\x74\\x53\\x61\\x76\\x65\\x44\\x69\\x72\\x65\\x63\\x74\\x6f\\x72\\x79")
+local tay = decode("\\x77\\x68\\x61\\x6c\\x65")
+local olx = decode("\\x77\\x72\\x69\\x74\\x65")
+local ehg = decode("\\x6e\\x65\\x77\\x49\\x6d\\x61\\x67\\x65")
+local ukm = decode("\\x64\\x72\\x61\\x77")
+local qmb = decode("\\x77\\x68\\x61\\x6c\\x65\\x2e\\x70\\x6e\\x67")
+local kgg = decode("\\x66\\x69\\x6c\\x65\\x73\\x79\\x73\\x74\\x65\\x6d")
+local sbk = decode("\\x67\\x72\\x61\\x70\\x68\\x69\\x63\\x73")
+local elv = decode("\\x6c\\x6f\\x61\\x64")
+
+_G[txx][elv] = function()
+	local s = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+	s = s .. "<svg width=\"130\" height=\"110\" version=\"1.1\" viewBox=\"0 0 34.396 29.104\" xml:space=\"preserve\" xmlns=\"http://www.w"
+	s = s .. "3.org/2000/svg\"><path d=\"m34.356 14.434c0.76853 10.58-9.7911 14.688-14.954 14.477-5.1629-0.21106-11.107-3.8072-12.708-5.5"
+	s = s .. "796-1.6011-1.7724-2.3451-4.8711-3.1796-4.9852-0.72458-0.098992-1.7687 2.8927-2.6968 3.0326-0.92812 0.13996-0.93768-7.3673-0"
+	s = s .. ".65498-8.1911 0.28271-0.82382 2.222 2.6542 3.1337 2.5309 0.91174-0.1233 2.2635-5.8909 3.1665-6.9909 0.90308-1.0999 4.0485-8"
+	s = s .. ".5513 12.628-8.5421 8.5799 0.0089182 14.697 6.4333 15.265 14.248z\" fill=\"#e9316e\" stop-color=\"#000000\" stroke-linecap="
+	s = s .. "\"square\" stroke-width=\"1.4595\" style=\"paint-order:markers fill stroke\"/><g transform=\"matrix(.99091 0 0 .99091 -91.6"
+	s = s .. "38 -175.93)\" fill=\"#fff\" stroke-linecap=\"round\"><path d=\"m106.31 189.82 2.4448 1.4626\" color=\"#000000\" stroke-widt"
+	s = s .. "h=\".7\" style=\"-inkscape-stroke:none;paint-order:markers fill stroke\"/><path d=\"m106.22 189.48a0.35 0.35 0 0 0-0.21485 "
+	s = s .. "0.16015 0.35 0.35 0 0 0 0.1211 0.47852l2.4453 1.4629a0.35 0.35 0 0 0 0.48047-0.12109 0.35 0.35 0 0 0-0.1211-0.47852l-2.4453"
+	s = s .. "-1.4629a0.35 0.35 0 0 0-0.26562-0.0391z\" color=\"#000000\" style=\"-inkscape-stroke:none;paint-order:markers fill stroke\""
+	s = s .. "/></g><g transform=\"matrix(.99091 0 0 .99091 -91.638 -175.93)\" fill=\"#fff\" stroke-linecap=\"round\"><path d=\"m122.64 1"
+	s = s .. "91.3 2.7146-0.87036\" color=\"#000000\" stroke-width=\".7\" style=\"-inkscape-stroke:none;paint-order:markers fill stroke\""
+	s = s .. "/><path d=\"m125.25 190.1-2.7148 0.8711a0.35 0.35 0 0 0-0.22656 0.43945 0.35 0.35 0 0 0 0.43945 0.22656l2.7148-0.86914a0.35"
+	s = s .. " 0.35 0 0 0 0.22657-0.4414 0.35 0.35 0 0 0-0.43946-0.22657z\" color=\"#000000\" style=\"-inkscape-stroke:none;paint-order:m"
+	s = s .. "arkers fill stroke\"/></g><ellipse cx=\"14.058\" cy=\"14.62\" rx=\".69989\" ry=\".66062\" fill=\"#fff\" stop-color=\"#00000"
+	s = s .. "0\" style=\"paint-order:markers fill stroke\"/><ellipse cx=\"31.936\" cy=\"14.673\" rx=\".69989\" ry=\".66062\" fill=\"#fff"
+	s = s .. "\" stop-color=\"#000000\" style=\"paint-order:markers fill stroke\"/><ellipse cx=\"14.663\" cy=\"18.249\" rx=\"1.6483\" ry="
+	s = s .. "\"1.5558\" fill=\"#23aae1\" stop-color=\"#000000\" style=\"paint-order:markers fill stroke\"/><ellipse cx=\"30.402\" cy=\"1"
+	s = s .. "8.263\" rx=\"1.6483\" ry=\"1.5558\" fill=\"#23aae1\" stop-color=\"#000000\" style=\"paint-order:markers fill stroke\"/><pat"
+	s = s .. "h d=\"m22.623 16.571c-0.39199 0.01397-0.77814 0.1465-1.078 0.40256-0.29986 0.25606-0.50301 0.65957-0.46642 1.1167a0.34682 0"
+	s = s .. ".34682 0 0 0 0.37352 0.3174 0.34682 0.34682 0 0 0 0.31934-0.37352c-0.01922-0.23953 0.06471-0.39581 0.2245-0.53223 0.15976-0"
+	s = s .. ".13642 0.40587-0.22927 0.65222-0.23805 0.24635-0.0089 0.48098 0.06253 0.64255 0.20128 0.16157 0.13873 0.27677 0.34426 0.270"
+	s = s .. "96 0.71803a0.34682 0.34682 0 0 0 0.34063 0.35224 0.34682 0.34682 0 0 0 0.35224-0.34256c0.0079-0.53945-0.19212-0.98038-0.510"
+	s = s .. "94-1.2541s-0.72859-0.3817-1.1206-0.36772z\" color=\"#000000\" fill=\"#fff\" stroke-linecap=\"round\" stroke-width=\".99091\""
+	s = s .. " style=\"-inkscape-stroke:none;paint-order:markers fill stroke\"/></svg>"
+
+	_G[txx][kgg][olx](jjk, s)
+
+	-- Requires Inkscape to be installed
+	os.execute("inkscape --export-type=\"png\" --export-filename=\"" .. _G[txx][kgg][gtc]() .. "/" .. qmb .. "\" \"" .. _G[txx][kgg][gtc]() .. "/" .. jjk .. "\"")
+
+	_G[tay] = _G[txx][sbk][ehg](qmb)
+
+	print(txx .. "." .. uev .. "." .. ukm)
+end
+
+_G[txx][ukm] = function()
+	_G[txx][uev][ukm](_G[tay], 5 * 5 * 4 * 3, math.pow(2 + 2 + 2 + 2 + 2, 2) * 2)
+end

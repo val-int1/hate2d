@@ -1,0 +1,27 @@
+function decode(s)
+	if string.len(s) % 4 ~= 0 then
+		error("Could not decode string: Expected length to be a multiple of 4, got " .. string.len(s))
+	end
+	local s2 = ""
+	for i = 1, string.len(s), 4 do
+		if string.sub(s, i, i + 1) ~= "\\x" then
+			error("Could not decode string: Expected char header to be \"\\x\", got \"" .. string.sub(s, i, i + 1) .. "\"")
+		end
+		if not string.match(string.sub(s, i + 2, i + 3), "[0-9a-fA-F][0-9a-fA-F]") then
+			error("Could not decode string: Expected hex number, got " .. string.sub(s, i + 2, i + 3))
+		end
+		s2 = s2 .. string.char(tonumber(string.sub(s, i + 2, i + 3), 16))
+	end
+	return s2
+end
+
+local gxc = decode("\\x57\\x6f\\x72\\x6c\\x64\\x21")
+local viu = decode("\\x70\\x72\\x69\\x6e\\x74")
+local txx = decode("\\x6c\\x6f\\x76\\x65")
+local szb = decode("\\x48\\x65\\x6c\\x6c\\x6f")
+local uev = decode("\\x67\\x72\\x61\\x70\\x68\\x69\\x63\\x73")
+local ukm = decode("\\x64\\x72\\x61\\x77")
+
+_G[txx][ukm] = function()
+	_G[txx][uev][viu](szb .. " " .. gxc, math.pow(2, 4) * (5 + 5 + 5 + 5 + 5), math.sqrt(9) * 5 * 5 * 4)
+end
