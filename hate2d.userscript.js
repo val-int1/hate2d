@@ -24,6 +24,13 @@
 		snippetsFetched = true
 	}
 
+	function nofun(e) {
+		if(currentlyEvil) {
+			e.preventDefault();
+			alert("\"I hate fun.\" - HÄTEWhale")
+		}
+	}
+
 	const TEXT_NORMAL = {
 		"TITLE": "LÖVE - Free 2D Game Engine",
 
@@ -66,12 +73,18 @@
 
 		// Examples
 		"EASY_TO_USE": "It’s pretty easy to get started with LÖVE, just check out these code snippets.",
-
 		"SNIPPETS": [
 			"function love.draw()\n\tlove.graphics.print(\"Hello World!\", 400, 300)\nend",
 			"function love.load()\n\twhale = love.graphics.newImage(\"whale.png\")\nend\nfunction love.draw()\n\tlove.graphics.draw(whale, 300, 200)\nend",
 			"function love.load()\n\tsound = love.audio.newSource(\"music.ogg\", \"stream\")\n\tlove.audio.play(sound)\nend"
-		]
+		],
+		"TUTORIALS": "Check out some more tutorials on <a href=\"./wiki\">the wiki.</a>",
+		"GAMES": "LÖVE has been used for commercial projects, game jams, prototyping, and everything in between. Here are a few examples.",
+
+		// Stuff
+		"TWITTER": "<a href=\"https://twitter.com/obey_love\">@obey_love on Twitter</a>",
+		"RELEASES": "<a href=\"releases.xml\">Release announcements feed</a>",
+		"CONTACT": "You can <a href=\"https://github.com/love2d/love/issues\">file a bug</a>, ask a question in <a href=\"/forums/\">the forums</a>, or <a href=\"mailto:andruud@gmail.com\">contact rude</a> for other stuff."
 	}
 
 	const TEXT_HATE = {
@@ -116,12 +129,18 @@
 
 		// Examples
 		"EASY_TO_USE": "It’s extremely hard to get over with HÄTE, just check out these code snippets.",
-
 		"SNIPPETS": [
 			"draw_text",
 			"draw_image",
 			"play_sound"
-		]
+		],
+		"TUTORIALS": "There are no other tutorials on <a href=\"./wiki\">the wiki</a>, don't even bother looking.",
+		"GAMES": "HÄTE hasn't been used for commercial projects, game jams, prototyping, or anything in between. So we can't show you any examples.",
+
+		// Stuff
+		"TWITTER": "<a href=\"https://twitter.com/disobey_hate\">@disobey_hate still not on Twitter</a>",
+		"RELEASES": "<a href=\"https://raw.githubusercontent.com/val-int1/hate2d/main/releases.txt\">Release announcements feed</a>",
+		"CONTACT": "You can't file bugs, ask questions in the forums, or contact anyone for other stuff."
 	}
 
 	populateSnippets(TEXT_HATE.SNIPPETS)
@@ -139,9 +158,10 @@
 
 	const HATE_STYLE = document.createElement("style")
 	HATE_STYLE.innerHTML = "body { background-color: #FCE0E9; }" +
-					  "main { background-image: url(https://raw.githubusercontent.com/val-int1/hate2d/main/logo.png); }" +
-					  "section#download, section#examples dd { filter: hue-rotate(142.5deg); }" +
-					  "code { font-size: 0.7em; }"
+						   "main { background-image: url(https://raw.githubusercontent.com/val-int1/hate2d/main/logo.png); }" +
+						   "section#download, section#examples dd { filter: hue-rotate(142.5deg); }" +
+						   "code { font-size: 0.7em; }" +
+						   "#games ul { display: none; }"
 
 	const INTRO_ELEM = document.getElementById("intro")
 	const DOWNLOAD_ELEM = document.getElementById("download")
@@ -156,6 +176,15 @@
 
 	const EXAMPLES_ELEM = document.getElementById("examples")
 	const CODE_ELEMS = document.getElementsByTagName("code")
+
+	const GAMES_ELEM = document.getElementById("games")
+
+	const STUFF_ELEM = document.getElementById("stuff")
+	STUFF_ELEM.children[1].children[1].addEventListener("click", nofun)
+
+	const CONTACT_ELEM = document.getElementById("contact")
+
+	const DOCS_ELEM = document.getElementById("documentation").children[1]
 
 	setInterval(function() {
 		let evil = window.location.hash === "#evil"
@@ -199,6 +228,22 @@
 			CODE_ELEMS[i].innerHTML = "";
 			CODE_ELEMS[i].innerText = text.SNIPPETS[i]
 			hljs.highlightBlock(CODE_ELEMS[i])
+		}
+		EXAMPLES_ELEM.children[3].innerHTML = text.TUTORIALS
+
+		GAMES_ELEM.children[1].innerText = text.GAMES
+
+		STUFF_ELEM.children[1].children[0].innerHTML = text.TWITTER
+		STUFF_ELEM.children[1].children[2].innerHTML = text.RELEASES
+
+		CONTACT_ELEM.children[1].innerHTML = text.CONTACT
+
+		for(let i = 0; i < DOCS_ELEM.childElementCount; i++) {
+			let elem = DOCS_ELEM.children[i].children[0]
+			if(elem.innerText === "love") {
+				elem.innerText = "hate"
+			}
+			elem.href = ""
 		}
 
 		if(currentlyEvil) {
