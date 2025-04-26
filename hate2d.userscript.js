@@ -52,9 +52,8 @@
 		"OTHER": [
 			"<a href=\"https://play.google.com/store/apps/details?id=org.love2d.android\">Play Store</a>",
 			"<a href=\"https://github.com/love2d/love/releases/download/11.5/love-11.5-android.apk\">Android APK</a>",
-			"iOS <a href=\"https://github.com/love2d/love/releases/download/11.5/love-11.5-ios-source.zip\">source</a> / " + // < This are the
-			"<a href=\"https://github.com/love2d/love/releases/download/11.5/love-11.5-apple-libraries.zip\">libraries</a>", // < same line
-			"<a href=\"https://github.com/love2d/love/releases\">Older versions</a>"
+			"iOS <a href=\"https://github.com/love2d/love/releases/download/11.5/love-11.5-ios-source.zip\">source</a> / " + // < These are the
+			"<a href=\"https://github.com/love2d/love/releases/download/11.5/love-11.5-apple-libraries.zip\">libraries</a>"  // < same line
 		],
 
 		// Features
@@ -109,8 +108,7 @@
 			"<a href=\"https://play.google.com/store/apps/details?id=org.love2d.android\">Play Station</a>",
 			"<a href=\"https://github.com/love2d/love/releases/download/11.5/love-11.5-android.apk\">Source (tar.xz)</a>",
 			"<a href=\"https://github.com/love2d/love/releases/download/11.5/love-11.5-ios-source.zip\">ISAWTHISBOATIN.hlf</a> "+
-			"<a href=\"https://github.com/love2d/love/releases/download/11.5/love-11.5-apple-libraries.zip\">(the other half)</a>",
-			"<a href=\"https://github.com/love2d/love/releases\">Newer versions</a>"
+			"<a href=\"https://github.com/love2d/love/releases/download/11.5/love-11.5-apple-libraries.zip\">(the other half)</a>"
 		],
 
 		// Features
